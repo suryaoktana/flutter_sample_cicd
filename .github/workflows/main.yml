@@ -41,4 +41,3 @@ jobs:
             token: ${{secrets.TOKEN}}
             groups: pre-tester
             file: build/app/outputs/apk/release/app-release.apk
-            tag: v1.0.$({ github.run_number })
