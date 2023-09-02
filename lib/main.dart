@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sample_cicd/firebase_options.dart';
 
-void main() async{
+void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
@@ -28,7 +28,7 @@ class PageOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Column(
-        children: [Text('Hello World!')],
+        children: [Text('Hello World, this is sample code!')],
       ),
     );
   }
