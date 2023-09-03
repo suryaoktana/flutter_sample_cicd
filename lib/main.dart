@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample_cicd/firebase_options.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
@@ -27,8 +28,13 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children: [Text('Hello World, this is sample code!')],
+      body: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [Text('Hello World, this is sample code!')],
+        ),
       ),
     );
   }
